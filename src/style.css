@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --primary-color: #2884d4;
+  --primary-button-color: #e9232d;
+  --primary-button-color-hover: #ba1c24;
+  --secondary-button-color: #131418;
+  --container-border: #696969;
+  --task-container-color: #f0f0f0;
+  --button-text-color: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  position: relative;
+  background-image: url('../img/backdrop2.jpg');
+  /*background-size: cover;*/
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  width: 580px;
+  height: 90%;
+  padding: 20px;
+  border: 1px solid var(--container-border);
+  border-radius: 2px;
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 400px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 300px;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .logo img {
+    visibility: hidden;
+  }
+}
+
+/*header styles*/ /*----------------------------------------------------------------------------------------------------------------------*/ /*head section styles*/
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.head h1 {
+  color: var(--button-text-color);
+  font-weight: normal;
+  font-size: 40px;
+}
+
+#close-add-a-task-btn {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  color: var(--button-text-color);
+  background-color: var(--primary-button-color);
+  font-size: 18px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+#close-add-a-task-btn:hover {
+  transition: background-color 0.5s linear;
+  background-color: var(--primary-button-color-hover);
+}
+
+/*task-input section styles*/
+.task-input {
+  margin-bottom: 20px;
+}
+.task-input label {
+  color: var(--button-text-color);
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: 1px solid var(--container-border);
+  border-radius: 5px;
+}
+
+#save-task {
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background-color: var(--secondary-button-color);
+  border: 0;
+  border-radius: 5px;
+  color: var(--button-text-color);
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: inset 0 0 10px var(--container-border);
+}
+#save-task:hover {
+  transition: box-shadow 0.3s linear;
+  box-shadow: none;
+}
+
+/*main styles*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.main {
+  height: 100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  overflow: auto;
+}
+
+#no-task-msg {
+  color: var(--button-text-color);
+  text-align: center;
+}
+
+.task {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 3px;
+  background-color: var(--task-container-color);
+}
+.task h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.delete-task-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--primary-button-color);
+}
+.delete-task-btn:hover {
+  transition: color 0.5s linear;
+  color: var(--primary-button-color-hover);
+}
+
+/*footer styles*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.footer {
+  color: var(--button-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid var(--container-border);
+}
+
+/*scrollbar styling*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--container-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--container-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}

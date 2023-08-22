@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2Du - Task Tracker</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="2DU logo" /></a>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <section class="head">
+          <h1>2Du Task Tracker</h1>
+          <button id="close-add-a-task-btn">Close</button>
+        </section>
+
+        <section class="task-set">
+          <div class="task-input">
+            <label for="task-name">Task</label>
+            <br />
+            <input
+              type="text"
+              id="task-name"
+              placeholder="Add Task"
+              class="input"
+              required
+            />
+          </div>
+
+          <div class="task-input">
+            <label for="task-deadline">Set a Task Deadline</label>
+            <br />
+            <input
+              type="datetime-local"
+              id="task-deadline"
+              placeholder="Add a Task Deadline"
+              class="input"
+              required
+            />
+          </div>
+
+          <div class="task-input">
+            <button id="save-task">Save Task</button>
+          </div>
+        </section>
+      </div>
+
+      <hr />
+
+      <div class="main">
+        <p id="no-task-msg">Add a task to show here</p>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2023 Copyright Jolin Thomas. All rights reserved</p>
+      </div>
+    </div>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
+
+<!--sample task element-->
+<!--        <div class="task">-->
+<!--          <h5>Task Description</h5>-->
+<!--          <i class="fa-solid fa-xmark delete-task-btn"></i>-->
+<!--          <p>task Deadline</p>-->
+<!--        </div>-->
