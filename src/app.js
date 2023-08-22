@@ -2,9 +2,7 @@ const closeAddTask = document.getElementById('close-add-a-task-btn');
 const saveTask = document.getElementById('save-task');
 const body = document.querySelector('body');
 
-body.style.backgroundImage = `url('../img/backdrop${randomNumberGenerator(
-  2,
-)}.jpg')`;
+body.style.backgroundImage = `url('./backdrop${randomNumberGenerator(2)}.jpg')`;
 
 let flag = 1;
 let taskNumber;
